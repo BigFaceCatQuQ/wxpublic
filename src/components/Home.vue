@@ -2,14 +2,12 @@
   <div class="home">
     <el-header>
       <div class="top">
-        <el-row>
-          <el-col :span="12">
-            <div style="blackground-color:red" class="grid-content bg-purple"> <img src="../assets/LOGO.png" /> </div>
-          </el-col>
-          <el-col :span="12">
+          <div class="head-left">
+            <div style="blackground-color:red" class="grid-content bg-purple"> <img src="../assets/LOGO.png"/> </div>
+          </div>
+          <div class="head-right">
             <div style="blackground-color:black" class="grid-content bg-purple-light"></div>
-          </el-col>
-        </el-row>
+          </div>
       </div>
     </el-header>
     <el-main>
@@ -51,4 +49,11 @@ export default {
   background-color: #1f2025;
 }
 
+.head-left {
+    float: left;
+}
+
+.head-right {
+    float: right;
+}
 </style>
