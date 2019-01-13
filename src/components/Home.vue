@@ -27,47 +27,45 @@
         </el-carousel-item>
       </el-carousel>
     </div>
-    <el-main>
-      <div class="content">
-        <component :is="isShow"></component>
-      </div>
-    </el-main>
-      <div class="bottom">
-        <div class="bottom-left">
-          <div class="bottom-companyname">
-            <span/>远信
-          </div>
-          <div class="bottom-companynotice">
-            <span/>遥可及，远可信
-          </div>
+    <div class="content">
+      <component :is="isShow"></component>
+    </div>
+    <div class="bottom">
+      <div class="bottom-left">
+        <div class="bottom-companyname">
+          <span />远信
         </div>
-        <div class="bottom-center">
-          <div class="center-content">
-            <img src="../assets/tel.png" alt>
-            <span style="top:10px;">+86 56563252</span>
-          </div>
-        </div>
-        <div class="bottom-right">
-          <div class="bottom-company-name">
-            <span/>上海见慧企业发展有限公司
-          </div>
-          <div class="bottom-company-notice" style="width: 200px;margin:0;">
-            <p>智创未来，助力发展</p>
-            <p>服务大众，成就自我</p>
-          </div>
+        <div class="bottom-companynotice">
+          <span />遥可及，远可信
         </div>
       </div>
+      <div class="bottom-center">
+        <div class="center-content">
+          <img src="../assets/tel.png" alt>
+          <span style="top:10px;">+86 56563252</span>
+        </div>
+      </div>
+      <div class="bottom-right">
+        <div class="bottom-company-name">
+          <span />上海见慧企业发展有限公司
+        </div>
+        <div class="bottom-company-notice" style="width: 200px;margin:0;">
+          <p>智创未来，助力发展</p>
+          <p>服务大众，成就自我</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import Business from './Business'
-import Contract from './Contract'
-import Introduce from './Introduce'
+import Business from "./Business";
+import Contract from "./Contract";
+import Introduce from "./Introduce";
 
 export default {
   name: "Home",
-  components:{
+  components: {
     Introduce,
     Business,
     Contract
@@ -80,17 +78,17 @@ export default {
       ],
       screenWidth: document.documentElement.clientWidth,
       imgHeight: "665px",
-      isShow:Introduce
+      isShow: Introduce
     };
   },
   methods: {
-    toShow(val){
-      if(val===1){
-        this.isShow=Introduce
-      }else if(val===2){
-        this.isShow=Business
-      }else{
-        this.isShow=Contract
+    toShow(val) {
+      if (val === 1) {
+        this.isShow = Introduce;
+      } else if (val === 2) {
+        this.isShow = Business;
+      } else {
+        this.isShow = Contract;
       }
     }
   },
@@ -129,7 +127,6 @@ export default {
 .content {
   width: 100%;
   height: 500px;
-  background-color: red;
 }
 
 .bottom {
