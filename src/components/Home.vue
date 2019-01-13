@@ -27,11 +27,9 @@
         </el-carousel-item>
       </el-carousel>
     </div>
-    <el-main>
       <div class="content">
         <component :is="isShow"></component>
       </div>
-    </el-main>
       <div class="bottom">
         <div class="bottom-left">
           <div class="bottom-companyname">
@@ -129,7 +127,6 @@ export default {
 .content {
   width: 100%;
   height: 500px;
-  background-color: red;
 }
 
 .bottom {
