@@ -16,7 +16,12 @@ module.exports = {
           'vue-style-loader',
           'css-loader'
         ],
-      },      {
+      },
+      {
+        test: /\.(woff|svg|eot|ttf)\??.*$/,
+        loader: 'url-loader'
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {

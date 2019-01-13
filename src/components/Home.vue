@@ -4,11 +4,7 @@
       <div class="top">
         <div class="head-left">
           <div class="logo-img">
-            <img
-              src="../assets/logo1.png"
-              alt=""
-              height="120px"
-            >
+            <img src="../assets/logo1.png" alt="" height="120px">
           </div>
           <div class="word">
             <div style="padding:30px 0 0 0;text-align:left">
@@ -34,19 +30,9 @@
     </el-header>
     <el-main>
       <div class="centre">
-        <el-carousel
-          arrow="always"
-          trigger="click"
-          height="550px"
-        >
-          <el-carousel-item
-            v-for="item in imgList"
-            :key="item.id"
-          >
-            <el-col :span="24"><img
-                :src="item.idView"
-                width="100%"
-              /></el-col>
+        <el-carousel arrow="always" indicator-position="none" trigger="click" height="700px">
+          <el-carousel-item v-for="item in imgList" :key="item.id">
+            <img :src="item.idView" width="100%" />
           </el-carousel-item>
         </el-carousel>
       </div>
@@ -85,7 +71,7 @@ export default {
 
 .centre {
   width: 100%;
-  height: 550px;
+  height: 700px;
   background-color: #e8e8e8;
 }
 
