@@ -52,7 +52,7 @@
           <div class="bottom-company-name">
             <span/>上海见慧企业发展有限公司
           </div>
-          <div class="bottom-company-notice">
+          <div class="bottom-company-notice" style="width: 200px;margin:0;">
             <p>智创未来，助力发展</p>
             <p>服务大众，成就自我</p>
           </div>
@@ -236,7 +236,7 @@ export default {
 .bottom-company-notice {
   position: relative;
   top: 20px;
-  left: 40px;
+  left: 180px;
   color: #b3b3b3;
   font-size: 1.2em;
   font-family: "YouYuan";
