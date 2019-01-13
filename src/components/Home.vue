@@ -202,25 +202,25 @@ export default {
 }
 .bottom-companyname {
   position: relative;
-  top: 20px;
+  top: 30px;
   right: 60px;
   color: #b3b3b3;
-  font-size: 4em;
+  font-size: 48px;
   font-family: "YouYuan";
 }
 .bottom-companynotice {
   position: relative;
-  top: 20px;
+  top: 30px;
   left: 80px;
   color: #b3b3b3;
-  font-size: 2em;
+  font-size: 16px;
   font-family: "YouYuan";
 }
 .center-content {
   position: relative;
   top: 30px;
   color: #b3b3b3;
-  font-size: 3em;
+  font-size: 36px;
   font-family: "YaHei UI";
 }
 .bottom-company-name {
@@ -228,15 +228,15 @@ export default {
   top: 20px;
   right: 60px;
   color: #b3b3b3;
-  font-size: 3em;
+  font-size: 36px;
   font-family: "YouYuan";
 }
 .bottom-company-notice {
   position: relative;
-  top: 20px;
+  top: 30px;
   left: 180px;
   color: #b3b3b3;
-  font-size: 1.2em;
+  font-size: 12px;
   font-family: "YouYuan";
 }
 </style>
