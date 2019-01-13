@@ -20,7 +20,7 @@
         </div>
       </div>
     </el-header>
-    <div class="centre">
+    <div class="center">
       <el-carousel :interval="5000" :height="imgHeight">
         <el-carousel-item v-for="item in imgList" :key="item.id">
           <img ref="imgHeight" :src="item.idView" width="100%" />
@@ -120,7 +120,7 @@ export default {
   background-color: #ffffff;
 }
 
-.centre {
+.center {
   width: 100%;
   height: auto;
   background-color: #e8e8e8;

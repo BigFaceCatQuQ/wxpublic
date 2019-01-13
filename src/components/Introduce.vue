@@ -1,6 +1,7 @@
 <template>
   <div class="introduce">
-11111111111111
+      <div class="companyIntroduce"></div>
+      <div class="aboutCompany"></div>
   </div>
 </template>
 
@@ -19,8 +20,14 @@ export default {
 </script>
 
 <style scoped>
-.introduce{
+.introduce {
     width: 100%;
     height: 100%;
+}
+.companyIntroduce {
+
+}
+.aboutCompany {
+    
 }
 </style>
