@@ -4,7 +4,7 @@
       <div class="top">
         <div class="head-left">
           <div class="logo-img">
-            <img src="../assets/logo1.png" alt="" height="120px">
+            <img src="../assets/logo1.png" alt height="120px">
           </div>
           <div class="word">
             <div style="padding:30px 0 0 0;text-align:left">遥可及 远可信</div>
@@ -12,19 +12,7 @@
           </div>
         </div>
         <div class="head-right">
-          <!-- <div class="tag">
-            首页
-          </div>
-          <div class="tag">
-            代理招商说明
-          </div>
-          <div class="tag">
-            代理合同文本
-          </div>-->
-          <el-menu
-            class="el-menu-demo"
-            mode="horizontal"
-          >
+          <el-menu class="el-menu-demo" mode="horizontal">
             <el-menu-item index="1">首页</el-menu-item>
             <el-menu-item index="2">代理招商说明</el-menu-item>
             <el-menu-item index="3">代理合同文本</el-menu-item>
@@ -36,13 +24,37 @@
       <div class="centre">
         <el-carousel arrow="always" indicator-position="none" trigger="click" height="700px">
           <el-carousel-item v-for="item in imgList" :key="item.id">
-            <img :src="item.idView" width="100%" />
+            <img :src="item.idView" width="100%">
           </el-carousel-item>
         </el-carousel>
       </div>
     </el-main>
     <el-footer>
-      <div class="bottom"></div>
+      <div class="bottom">
+        <div class="bottom-left">
+          <div class="bottom-companyname">
+            <span/>远信
+          </div>
+          <div class="bottom-companynotice">
+            <span/>遥可及，远可信
+          </div>
+        </div>
+        <div class="bottom-center">
+          <div class="center-content">
+            <img src="../assets/tel.png" alt>
+            <span style="top:10px;">+86 56563252</span>
+          </div>
+        </div>
+        <div class="bottom-right">
+          <div class="bottom-company-name">
+            <span/>上海见慧企业发展有限公司
+          </div>
+          <div class="bottom-company-notice">
+            <p>智创未来，助力发展</p>
+            <p>服务大众，成就自我</p>
+          </div>
+        </div>
+      </div>
     </el-footer>
   </div>
 </template>
@@ -81,7 +93,7 @@ export default {
 
 .bottom {
   width: 100%;
-  height: 550px;
+  height: 150px;
   background-color: #1f2025;
 }
 
@@ -132,6 +144,60 @@ export default {
 
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
+}
+.bottom-left {
+  width: 25%;
+  height: 150px;
+  float: left;
+}
+.bottom-center {
+  width: 40%;
+  height: 150px;
+  float: left;
+}
+.bottom-right {
+  width: 33%;
+  height: 150px;
+  float: right;
+}
+.bottom-companyname {
+  position: relative;
+  top: 20px;
+  right: 60px;
+  color: #b3b3b3;
+  font-size: 4em;
+  font-family: "YouYuan";
+}
+.bottom-companynotice {
+  position: relative;
+  top: 20px;
+  left: 80px;
+  color: #b3b3b3;
+  font-size: 2em;
+  font-family: "YouYuan";
+}
+.center-content {
+  position: relative;
+  top: 30px;
+  color: #b3b3b3;
+  font-size: 3em;
+  font-family: "YaHei UI";
+}
+.bottom-company-name {
+  position: relative;
+  top: 20px;
+  right: 60px;
+  color: #b3b3b3;
+  font-size: 3em;
+  font-family: "YouYuan";
+}
+.bottom-company-notice {
+  position: relative;
+  top: 20px;
+  left: 40px;
+  color: #b3b3b3;
+  font-size: 1.2em;
+  font-family: "YouYuan";
 }
 </style>
 
