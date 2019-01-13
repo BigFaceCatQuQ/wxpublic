@@ -32,7 +32,6 @@
         <component :is="isShow"></component>
       </div>
     </el-main>
-    <el-footer>
       <div class="bottom">
         <div class="bottom-left">
           <div class="bottom-companyname">
@@ -58,7 +57,6 @@
           </div>
         </div>
       </div>
-    </el-footer>
   </div>
 </template>
 
