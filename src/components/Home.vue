@@ -77,11 +77,16 @@ export default {
         { id: 1, idView: require("../assets/lunbo2.png") }
       ],
       screenWidth: document.documentElement.clientWidth,
-      imgHeight: "665px",
+      imgHeight: '',
       isShow: Introduce
     };
   },
   methods: {
+    load(){
+      setTimeout(() => {
+        this.imgHeight = Number(this.$refs.imgHeight[0].height) + "px"
+      }, 100);
+    },
     toShow(val) {
       if (val === 1) {
         this.isShow = Introduce;
@@ -94,14 +99,15 @@ export default {
   },
   watch: {
     screenWidth: function() {
-      this.imgHeight = Number(this.$refs.imgHeight[0].height) + "px";
+      this.imgHeight = Number(this.$refs.imgHeight[0].height) + "px"
     }
   },
   mounted() {
-    var _this = this;
+    var _this = this
     window.onresize = function() {
-      _this.screenWidth = document.documentElement.clientWidth;
-    };
+      _this.screenWidth = document.documentElement.clientWidth
+    }
+    this.load()
   }
 };
 </script>
@@ -155,7 +161,6 @@ export default {
 }
 
 .word {
-  float: left;
   height: 120px;
   font-size: 20px;
 }
@@ -182,6 +187,7 @@ export default {
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
 }
+
 .bottom-left {
   width: 25%;
   height: 150px;
@@ -235,6 +241,10 @@ export default {
   color: #b3b3b3;
   font-size: 12px;
   font-family: "YouYuan";
+}
+
+.el-menu-demo {
+  width: 555px;
 }
 </style>
 
