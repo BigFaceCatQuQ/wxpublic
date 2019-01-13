@@ -12,33 +12,24 @@
           </div>
         </div>
         <div class="head-right">
-          <!-- <div class="tag">
-            首页
-          </div>
-          <div class="tag">
-            代理招商说明
-          </div>
-          <div class="tag">
-            代理合同文本
-          </div>-->
-          <el-menu
-            class="el-menu-demo"
-            mode="horizontal"
-          >
-            <el-menu-item index="1">首页</el-menu-item>
-            <el-menu-item index="2">代理招商说明</el-menu-item>
-            <el-menu-item index="3">代理合同文本</el-menu-item>
+          <el-menu default-active="1" class="el-menu-demo" mode="horizontal">
+            <el-menu-item index="1" class="tag" @click="toShow(1)">首页</el-menu-item>
+            <el-menu-item index="2" class="tag" @click="toShow(2)">代理招商说明</el-menu-item>
+            <el-menu-item index="3" class="tag" @click="toShow(3)">代理合同文本</el-menu-item>
           </el-menu>
         </div>
       </div>
     </el-header>
+    <div class="centre">
+      <el-carousel :interval="5000" :height="imgHeight">
+        <el-carousel-item v-for="item in imgList" :key="item.id">
+          <img ref="imgHeight" :src="item.idView" width="100%" />
+        </el-carousel-item>
+      </el-carousel>
+    </div>
     <el-main>
-      <div class="centre">
-        <el-carousel arrow="always" indicator-position="none" trigger="click" height="700px">
-          <el-carousel-item v-for="item in imgList" :key="item.id">
-            <img :src="item.idView" width="100%" />
-          </el-carousel-item>
-        </el-carousel>
+      <div class="content">
+        <component :is="isShow"></component>
       </div>
     </el-main>
     <el-footer>
@@ -48,14 +39,48 @@
 </template>
 
 <script>
+import Business from './Business'
+import Contract from './Contract'
+import Introduce from './Introduce'
+
 export default {
   name: "Home",
+  components:{
+    Introduce,
+    Business,
+    Contract
+  },
   data() {
     return {
       imgList: [
         { id: 0, idView: require("../assets/lunbo1.png") },
         { id: 1, idView: require("../assets/lunbo2.png") }
-      ]
+      ],
+      screenWidth: document.documentElement.clientWidth,
+      imgHeight: "665px",
+      isShow:Introduce
+    };
+  },
+  methods: {
+    toShow(val){
+      if(val===1){
+        this.isShow=Introduce
+      }else if(val===2){
+        this.isShow=Business
+      }else{
+        this.isShow=Contract
+      }
+    }
+  },
+  watch: {
+    screenWidth: function() {
+      this.imgHeight = Number(this.$refs.imgHeight[0].height) + "px";
+    }
+  },
+  mounted() {
+    var _this = this;
+    window.onresize = function() {
+      _this.screenWidth = document.documentElement.clientWidth;
     };
   }
 };
@@ -75,8 +100,14 @@ export default {
 
 .centre {
   width: 100%;
-  height: 700px;
+  height: auto;
   background-color: #e8e8e8;
+}
+
+.content {
+  width: 100%;
+  height: 500px;
+  background-color: red;
 }
 
 .bottom {
@@ -96,6 +127,7 @@ export default {
   float: right;
   width: 50%;
   height: 120px;
+  padding: 35px 0 0 35px;
 }
 
 .logo-img {
@@ -110,10 +142,8 @@ export default {
 }
 
 .tag {
-  width: 24%;
-  float: left;
-  padding-top: 50px;
   font-size: 20px;
+  padding: 0 45px;
 }
 </style>
 
