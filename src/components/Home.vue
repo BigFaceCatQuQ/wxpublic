@@ -1,22 +1,18 @@
 <template>
   <div class="home">
-    <el-header height=120px>
+    <el-header height="120px">
       <div class="top">
         <div class="head-left">
           <div class="logo-img">
             <img src="../assets/logo1.png" alt="" height="120px">
           </div>
           <div class="word">
-            <div style="padding:30px 0 0 0;text-align:left">
-              遥可及 远可信
-            </div>
-            <div style="padding:10px 0 0 0;text-align:left">
-              远信——实现作业管理的远程化、透明化
-            </div>
+            <div style="padding:30px 0 0 0;text-align:left">遥可及 远可信</div>
+            <div style="padding:10px 0 0 0;text-align:left">远信——实现作业管理的远程化、透明化</div>
           </div>
         </div>
         <div class="head-right">
-          <div class="tag">
+          <!-- <div class="tag">
             首页
           </div>
           <div class="tag">
@@ -24,7 +20,15 @@
           </div>
           <div class="tag">
             代理合同文本
-          </div>
+          </div>-->
+          <el-menu
+            class="el-menu-demo"
+            mode="horizontal"
+          >
+            <el-menu-item index="1">首页</el-menu-item>
+            <el-menu-item index="2">代理招商说明</el-menu-item>
+            <el-menu-item index="3">代理合同文本</el-menu-item>
+          </el-menu>
         </div>
       </div>
     </el-header>
